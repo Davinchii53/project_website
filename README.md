@@ -5,7 +5,7 @@
 **Stack:** Vanilla HTML5 / CSS3  
 **Deployment Target:** GitHub Pages  
 
-## 🎯 Milestones Achieved Today
+## Milestones Achieved Today
 
 * **Project Scoping:** 
   * Identified a local Bandung venue (TPANG The Social Fabriek) that currently relies on Google Maps, making it an ideal portfolio candidate.
@@ -17,7 +17,7 @@
   * Drafted `style.css` implementing CSS variables for theme management, a frosted glassmorphism sticky navigation, CSS Grid for typography alignment, and grayscale hover filters for the gallery.
   * Drafted `index.html` combining the Hero, Menu, Space (Gallery), and Footer sections into one continuous page.
 
-## 🗂️ Current File Structure
+## Current File Structure
 
 ```text
 /project-folder
