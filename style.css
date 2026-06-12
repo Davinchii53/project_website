@@ -1,0 +1,204 @@
+/* --- GLOBAL VARIABLES & RESET --- */
+:root {
+  --bg-color: #121212;
+  --text-main: #e0e0e0;
+  --text-muted: #888888;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --font-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* This makes the navigation links glide smoothly to the sections */
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--font-stack);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- THE NAVIGATION --- */
+.glass-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 4rem;
+  background: rgba(18, 18, 18, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 100;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: var(--text-main);
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(18, 18, 18, 0.6), rgba(18, 18, 18, 0.8)), 
+              url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=2047&auto=format&fit=crop') center/cover;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.hero-content h1 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  letter-spacing: -2px;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* --- SECTION LAYOUTS --- */
+.section-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  /* Added padding-top so the fixed nav doesn't cover the section titles */
+  padding: 8rem 2rem 6rem 2rem; 
+  min-height: 80vh;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  letter-spacing: -1px;
+}
+
+/* --- THE MENU --- */
+.menu-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.item-details h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 0 0 0.5rem 0;
+}
+
+.item-details p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.item-price {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+/* --- THE GALLERY --- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  filter: grayscale(80%) brightness(0.7);
+  transition: filter 0.5s ease, transform 0.5s ease;
+  cursor: pointer;
+}
+
+.gallery-img:hover {
+  filter: grayscale(0%) brightness(1);
+}
+
+/* --- THE FOOTER --- */
+.minimal-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 5rem 2rem;
+  background-color: #0a0a0a;
+  border-top: 1px solid var(--border-color);
+  gap: 2rem;
+}
+
+.footer-col h4 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.footer-col p, .footer-col a {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-decoration: none;
+  line-height: 1.8;
+}
+
+.footer-col a:hover {
+  color: var(--text-main);
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 768px) {
+  .glass-nav { padding: 1.2rem 2rem; }
+  .nav-links { gap: 1rem; }
+  .menu-item { grid-template-columns: 1fr; gap: 0.5rem; }
+  .minimal-footer { flex-direction: column; text-align: center; }
+}
