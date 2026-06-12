@@ -1,9 +1,10 @@
 /* --- GLOBAL VARIABLES & RESET --- */
 :root {
-  --bg-color: #121212;
-  --text-main: #e0e0e0;
-  --text-muted: #888888;
-  --border-color: rgba(255, 255, 255, 0.08);
+  --bg-color: #F8F5F2;       /* Creamy steamed milk background */
+  --text-main: #3E2A1E;      /* Deep espresso brown for main text */
+  --text-muted: #8B7355;     /* Soft latte brown for descriptions */
+  --border-color: #E6D8CC;   /* Warm beige for dividers */
+  --accent-color: #C19A6B;   /* Caramel / warm wood tone */
   --font-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -14,7 +15,6 @@
 }
 
 html {
-  /* This makes the navigation links glide smoothly to the sections */
   scroll-behavior: smooth;
 }
 
@@ -35,7 +35,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 4rem;
-  background: rgba(18, 18, 18, 0.6);
+  /* Frosted glass is now a translucent cream */
+  background: rgba(248, 245, 242, 0.8);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   z-index: 100;
@@ -66,7 +67,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #ffffff;
+  color: var(--accent-color);
 }
 
 /* --- HERO SECTION --- */
@@ -75,7 +76,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(rgba(18, 18, 18, 0.6), rgba(18, 18, 18, 0.8)), 
+  /* Switched to a warm, brightening gradient over the image */
+  background: linear-gradient(rgba(248, 245, 242, 0.6), rgba(248, 245, 242, 0.9)), 
               url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=2047&auto=format&fit=crop') center/cover;
   text-align: center;
   padding: 0 2rem;
@@ -86,6 +88,7 @@ body {
   letter-spacing: -2px;
   margin-bottom: 1rem;
   font-weight: 600;
+  color: var(--text-main);
 }
 
 .hero-content p {
@@ -99,7 +102,6 @@ body {
 .section-container {
   max-width: 1000px;
   margin: 0 auto;
-  /* Added padding-top so the fixed nav doesn't cover the section titles */
   padding: 8rem 2rem 6rem 2rem; 
   min-height: 80vh;
 }
@@ -142,7 +144,8 @@ body {
 
 .item-price {
   font-size: 1.3rem;
-  font-weight: 400;
+  font-weight: 500;
+  color: var(--accent-color);
 }
 
 /* --- THE GALLERY --- */
@@ -156,13 +159,14 @@ body {
   width: 100%;
   height: 400px;
   object-fit: cover;
-  filter: grayscale(80%) brightness(0.7);
+  /* Replaced harsh grayscale with a warm sepia tone for the bright aesthetic */
+  filter: sepia(30%) brightness(0.95);
   transition: filter 0.5s ease, transform 0.5s ease;
   cursor: pointer;
 }
 
 .gallery-img:hover {
-  filter: grayscale(0%) brightness(1);
+  filter: sepia(0%) brightness(1);
 }
 
 /* --- THE FOOTER --- */
@@ -171,7 +175,8 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 5rem 2rem;
-  background-color: #0a0a0a;
+  /* A deeper caramel/latte color to ground the bottom of the page */
+  background-color: #EADAC8;
   border-top: 1px solid var(--border-color);
   gap: 2rem;
 }
@@ -180,19 +185,19 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.8rem;
-  color: #666;
+  color: var(--text-muted);
   margin-bottom: 1.5rem;
 }
 
 .footer-col p, .footer-col a {
-  color: var(--text-muted);
+  color: var(--text-main);
   font-size: 0.9rem;
   text-decoration: none;
   line-height: 1.8;
 }
 
 .footer-col a:hover {
-  color: var(--text-main);
+  color: var(--accent-color);
 }
 
 /* --- RESPONSIVE ADJUSTMENTS --- */
