@@ -4,12 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TPANG. | The Social Fabriek</title>
-  <!-- This links your HTML to the style.css file -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navigation -->
   <nav class="glass-nav">
     <div class="logo"><a href="#home">TPANG.</a></div>
     <ul class="nav-links">
@@ -19,7 +17,6 @@
     </ul>
   </nav>
 
-  <!-- Hero Section -->
   <header id="home" class="hero-section">
     <div class="hero-content">
       <h1>Brewed for the Night.</h1>
@@ -27,11 +24,69 @@
     </div>
   </header>
 
-<!-- Menu Section -->
-  <section id="menu" class="section-container">
+  <section class="brand-story reveal">
+    <div class="story-image">
+      <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?q=80&w=2000&auto=format&fit=crop" alt="Barista pouring coffee">
+    </div>
+    <div class="story-text">
+      <h2>Crafted in the Warehouse.</h2>
+      <p>Housed inside a historic former Kina factory, TPANG brings industrial heritage together with modern coffee culture. Every bean is locally sourced and roasted to highlight the unique terroir of West Java.</p>
+      <a href="#space" class="outline-btn">Explore The Space</a>
+    </div>
+  </section>
+
+  <section id="signatures" class="section-container reveal">
+    <h2 class="section-title">Signatures</h2>
+    <div class="product-grid">
+      
+      <div class="product-card">
+        <div class="product-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?q=80&w=1000&auto=format&fit=crop" alt="Kopi Susu Gula Aren">
+        </div>
+        <div class="product-info">
+          <h3>Kopi Susu TPANG</h3>
+          <p>Our signature house blend pulled into a rich espresso, mixed with creamy milk and local palm sugar.</p>
+          <div class="product-footer">
+            <span class="product-price">28k</span>
+            <button class="add-to-cart-btn" data-name="Kopi Susu TPANG" data-price="28">+ Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1557006021-b85faa2bc5e2?q=80&w=1000&auto=format&fit=crop" alt="Matcha Espresso">
+        </div>
+        <div class="product-info">
+          <h3>Dirty Matcha</h3>
+          <p>Premium Uji matcha layered with fresh milk and topped with a single shot of espresso.</p>
+          <div class="product-footer">
+            <span class="product-price">35k</span>
+            <button class="add-to-cart-btn" data-name="Dirty Matcha" data-price="35">+ Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1623334044303-241021148842?q=80&w=1000&auto=format&fit=crop" alt="Almond Croissant">
+        </div>
+        <div class="product-info">
+          <h3>Almond Croissant</h3>
+          <p>Double-baked butter croissant filled with almond frangipane and topped with toasted flakes.</p>
+          <div class="product-footer">
+            <span class="product-price">30k</span>
+            <button class="add-to-cart-btn" data-name="Almond Croissant" data-price="30">+ Add</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="menu" class="section-container reveal">
     <h2 class="section-title">Our Menu</h2>
     
-    <!-- Filter Buttons -->
     <div class="menu-filters">
       <button class="filter-btn active" data-filter="all">All</button>
       <button class="filter-btn" data-filter="espresso">Espresso</button>
@@ -40,7 +95,6 @@
     </div>
 
     <div class="menu-container">
-      <!-- Manual Brew Item -->
       <div class="menu-item" data-category="manual">
         <div class="item-details">
           <h3>V60 Pour Over</h3>
@@ -52,7 +106,6 @@
         </div>
       </div>
       
-      <!-- Espresso Item -->
       <div class="menu-item" data-category="espresso">
         <div class="item-details">
           <h3>Flat White</h3>
@@ -64,7 +117,6 @@
         </div>
       </div>
       
-      <!-- Espresso Item -->
       <div class="menu-item" data-category="espresso">
         <div class="item-details">
           <h3>Japanese Iced Filter</h3>
@@ -76,7 +128,6 @@
         </div>
       </div>
 
-      <!-- Pastry Item -->
       <div class="menu-item" data-category="pastry">
         <div class="item-details">
           <h3>Butter Croissant</h3>
@@ -90,8 +141,7 @@
     </div>
   </section>
 
-  <!-- Gallery Section -->
-  <section id="space" class="section-container">
+  <section id="space" class="section-container reveal">
     <h2 class="section-title">The Warehouse</h2>
     <div class="gallery-grid">
       <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=2000&auto=format&fit=crop" alt="Coffee beans" class="gallery-img">
@@ -99,7 +149,7 @@
     </div>
   </section>
 
-  <section id="events" class="section-container">
+  <section id="events" class="section-container reveal">
     <h2 class="section-title">Upcoming Gigs</h2>
     
     <div class="events-grid">
@@ -121,7 +171,7 @@
     </div>
   </section>
 
-  <section id="booking" class="section-container">
+  <section id="booking" class="section-container reveal">
     <h2 class="section-title">Reserve a Space</h2>
     
     <form id="booking-form" class="booking-form">
@@ -179,7 +229,6 @@
     </form>
   </section>
 
-  <!-- Footer -->
   <footer class="minimal-footer">
     <div class="footer-col">
       <h4>Location</h4>
@@ -213,7 +262,7 @@
     </div>
   </div>
 
-<div id="event-modal-overlay" class="modal-overlay"></div>
+  <div id="event-modal-overlay" class="modal-overlay"></div>
   <div id="event-modal" class="custom-modal">
     <button id="close-modal" class="close-btn">&times;</button>
     <h2 id="modal-title">Event Title</h2>
@@ -222,7 +271,7 @@
     <button class="submit-btn" style="margin-top: 1.5rem;" onclick="document.getElementById('close-modal').click();">Got it</button>
   </div>
 
-<script>
+  <script>
     // Grab all the buttons and menu items from the DOM
     const filterBtns = document.querySelectorAll('.filter-btn');
     const menuItems = document.querySelectorAll('.menu-item');
@@ -256,8 +305,8 @@
         });
       });
     });
-    // --- BOOKING FORM LOGIC ---
     
+    // --- BOOKING FORM LOGIC ---
     // 1. Handle Space Selection
     const spaceCards = document.querySelectorAll('.space-card');
     const spaceInput = document.getElementById('selected-space');
@@ -329,7 +378,6 @@
     });
 
     // --- OFF-CANVAS CART LOGIC ---
-    
     // State management
     let cart = [];
     
@@ -408,7 +456,6 @@
     };
     
     // --- EVENT MODAL LOGIC ---
-    
     // Grab elements
     const eventCards = document.querySelectorAll('.event-card');
     const modalOverlay = document.getElementById('event-modal-overlay');
@@ -449,6 +496,28 @@
     // Add click listeners to close buttons and overlay
     closeModalBtn.addEventListener('click', closeModal);
     modalOverlay.addEventListener('click', closeModal); // Close if they click outside the box
+
+    // --- SCROLL REVEAL ANIMATION ---
+    const revealElements = document.querySelectorAll('.reveal');
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        // If the element comes into view
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          
+          // Stop observing once revealed so it doesn't animate out and in again
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      rootMargin: "0px 0px -50px 0px", // Triggers slightly before it fully hits the bottom of the screen
+      threshold: 0.15 // 15% of the element must be visible
+    });
+
+    revealElements.forEach(el => {
+      revealObserver.observe(el);
+    });
   </script>
 
 </body>
